@@ -1,7 +1,30 @@
-class film:
-    def _init_(self,titre, duree, genre, realisateur):
+class Film:
+    def __init__(self, titre, duree):
         self.titre = titre
         self.duree = duree
-        self.genre = genre
-        self.realisateur = realisateur
-    
+
+class Salle:
+    def __init__(self, numero, capacite, film=None):
+        self.numero = numero
+        self.capacite = capacite
+        self.film = film
+        self.places_reservees = 0
+
+    def reserver_place(self, nb):
+        if self.places_reservees + nb > self.capacite:
+            raise SallePleineException("Salle pleine !")
+        self.places_reservees += nb
+
+class SallePleineException(Exception):
+    pass
+
+class Reservation:
+    def __init__(self, client_nom, film, salle, nb_places):
+        self.client_nom = client_nom
+        self.film = film
+        self.salle = salle
+        self.nb_places = nb_places
+
+    def confirmer(self):
+        self.salle.reserver_place(self.nb_places)
+        print(f"Réservation confirmée pour {self.client_nom} ({self.nb_places} places pour {self.film.titre})")
