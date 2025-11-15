@@ -1,0 +1,14 @@
+[
+    {
+        "numero": 1,
+        "capacite": 50,
+        "film": "Avatar 2",
+        "places_reservees": 10
+    },
+    {
+        "numero": 2,
+        "capacite": 40,
+        "film": "Spider-Man",
+        "places_reservees": 5
+    }
+]
