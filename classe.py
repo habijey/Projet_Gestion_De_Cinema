@@ -2,6 +2,9 @@ class Film:
     def __init__(self, titre, duree):
         self.titre = titre
         self.duree = duree
+    
+    def to_dict(self):
+        return {"titre": self.titre, "duree": self.duree}
 
 class Salle:
     def __init__(self, numero, capacite, film=None):
@@ -14,8 +17,19 @@ class Salle:
         if self.places_reservees + nb > self.capacite:
             raise SallePleineException("Salle pleine !")
         self.places_reservees += nb
+    
+    def to_dict(self):
+        return {
+            "numero": self.numero,
+            "capacite": self.capacite,
+            "film": self.film.titre if self.film else None,
+            "places_reservees": self.places_reservees
+        }
 
 class SallePleineException(Exception):
+    pass
+
+class FilmInexistantException(Exception):
     pass
 
 class Reservation:
@@ -28,3 +42,11 @@ class Reservation:
     def confirmer(self):
         self.salle.reserver_place(self.nb_places)
         print(f"Réservation confirmée pour {self.client_nom} ({self.nb_places} places pour {self.film.titre})")
+    
+    def to_dict(self):
+        return {
+            "client_nom": self.client_nom,
+            "film": self.film.titre,
+            "salle": self.salle.numero,
+            "nb_places": self.nb_places
+        }
