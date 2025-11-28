@@ -1,14 +1,8 @@
 [
     {
-        "client": "Alice",
-        "film": "Avatar 2",
-        "salle": 1,
-        "places": 2
-    },
-    {
-        "client": "Marc",
-        "film": "Spider-Man",
-        "salle": 2,
-        "places": 3
+        "client_nom": "hello",
+        "film": "Charlie et la chocolatrie",
+        "salle": 3,
+        "nb_places": 2
     }
 ]
