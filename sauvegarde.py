@@ -2,28 +2,30 @@ import json
 import os
 from classe import Film, Salle, Reservation
 
-DATA_DIR = "Data"
-FILMS_FILE = os.path.join(DATA_DIR, "Films.json")
-SALLES_FILE = os.path.join(DATA_DIR, "Salles.json")
-RES_FILE = os.path.join(DATA_DIR, "Reservations.json")
+# Fichiers de données
+FILMS_FILE = "Data/Films.json"
+SALLES_FILE = "Data/Salles.json"
+RES_FILE = "Data/Reservations.json"
+USERS_FILE = "Data/utilisateurs.json"  # AJOUT
 
-os.makedirs(DATA_DIR, exist_ok=True)
+os.makedirs("Data", exist_ok=True)
 
 def charger_json(fichier):
     try:
-        with open(fichier, "r") as f:
+        with open(fichier, "r", encoding='utf-8') as f:  # AJOUT encoding
             return json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
         return []
 
 def sauvegarder_json(fichier, data):
-    with open(fichier, "w") as f:
-        json.dump(data, f, indent=4)
+    with open(fichier, "w", encoding='utf-8') as f:  # AJOUT encoding
+        json.dump(data, f, indent=2, ensure_ascii=False)  # MODIFICATION indentation
 
 def charger_donnees():
     films_data = charger_json(FILMS_FILE)
     salles_data = charger_json(SALLES_FILE)
     reservations_data = charger_json(RES_FILE)
+    utilisateurs_data = charger_json(USERS_FILE)  # AJOUT
 
     films = [Film(f["titre"], f["duree"]) for f in films_data]
 
@@ -42,9 +44,9 @@ def charger_donnees():
             reservation = Reservation(r["client_nom"], film_obj, salle_obj, r["nb_places"])
             reservations.append(reservation)
 
-    return films, salles, reservations
+    return films, salles, reservations, utilisateurs_data  # MODIFICATION
 
-def sauvegarder_donnees(films, salles, reservations):
+def sauvegarder_donnees(films, salles, reservations, utilisateurs=None):  # MODIFICATION
     films_dict = [f.to_dict() for f in films]
     salles_dict = [s.to_dict() for s in salles]
     reservations_dict = [r.to_dict() for r in reservations]
@@ -52,3 +54,6 @@ def sauvegarder_donnees(films, salles, reservations):
     sauvegarder_json(FILMS_FILE, films_dict)
     sauvegarder_json(SALLES_FILE, salles_dict)
     sauvegarder_json(RES_FILE, reservations_dict)
+    
+    if utilisateurs:  # AJOUT
+        sauvegarder_json(USERS_FILE, utilisateurs)

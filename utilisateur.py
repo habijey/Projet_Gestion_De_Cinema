@@ -1,12 +1,11 @@
 import hashlib
-import json
-import os
+from sauvegarde import charger_json, sauvegarder_json, USERS_FILE  # MODIFICATION
 
 class Utilisateur:
     def __init__(self, username, password, role):
         self.username = username
         self.password_hash = self._hash_password(password)
-        self.role = role  # "admin" ou "client"
+        self.role = role
     
     def _hash_password(self, password):
         return hashlib.sha256(password.encode()).hexdigest()
@@ -29,22 +28,16 @@ class Utilisateur:
 
 class GestionUtilisateurs:
     def __init__(self):
-        self.fichier_utilisateurs = "Data/utilisateurs.json"
-        os.makedirs("Data", exist_ok=True)
-        self.utilisateurs = self.charger_utilisateurs()
+        self.utilisateurs = self.charger_utilisateurs()  # MODIFICATION
         self._creer_admin_par_defaut()
     
     def charger_utilisateurs(self):
-        try:
-            with open(self.fichier_utilisateurs, "r") as f:
-                data = json.load(f)
-                return [Utilisateur.from_dict(u) for u in data]
-        except (FileNotFoundError, json.JSONDecodeError):
-            return []
+        utilisateurs_data = charger_json(USERS_FILE)  # MODIFICATION
+        return [Utilisateur.from_dict(u) for u in utilisateurs_data]
     
     def sauvegarder_utilisateurs(self):
-        with open(self.fichier_utilisateurs, "w") as f:
-            json.dump([u.to_dict() for u in self.utilisateurs], f, indent=4)
+        utilisateurs_data = [u.to_dict() for u in self.utilisateurs]
+        sauvegarder_json(USERS_FILE, utilisateurs_data)  # MODIFICATION
     
     def _creer_admin_par_defaut(self):
         if not any(u.username == "admin" for u in self.utilisateurs):
@@ -59,7 +52,7 @@ class GestionUtilisateurs:
         
         nouvel_utilisateur = Utilisateur(username, password, role)
         self.utilisateurs.append(nouvel_utilisateur)
-        self.sauvegarder_utilisateurs()
+        self.sauvegarder_utilisateurs()  # SAUVEGARDE
         return True, "✅ Inscription réussie !"
     
     def connecter(self, username, password):
