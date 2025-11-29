@@ -1,8 +1,50 @@
 [
-    {
-        "numero": 3,
-        "capacite": 50,
-        "film": "Charlie et la chocolatrie",
-        "places_reservees": 2
-    }
+  {
+    "numero": 1,
+    "capacite": 180,
+    "film": "Charlie et la Chocolaterie",
+    "places_reservees": 45
+  },
+  {
+    "numero": 2,
+    "capacite": 250,
+    "film": "Avengers: Endgame",
+    "places_reservees": 120
+  },
+  {
+    "numero": 3,
+    "capacite": 150,
+    "film": "Cars",
+    "places_reservees": 25
+  },
+  {
+    "numero": 4,
+    "capacite": 200,
+    "film": "Le Roi Lion",
+    "places_reservees": 95
+  },
+  {
+    "numero": 5,
+    "capacite": 220,
+    "film": "Harry Potter à l'école des sorciers",
+    "places_reservees": 60
+  },
+  {
+    "numero": 6,
+    "capacite": 160,
+    "film": "Retour vers le Futur",
+    "places_reservees": 15
+  },
+  {
+    "numero": 7,
+    "capacite": 140,
+    "film": null,
+    "places_reservees": 0
+  },
+  {
+    "numero": 8,
+    "capacite": 170,
+    "film": null,
+    "places_reservees": 0
+  }
 ]

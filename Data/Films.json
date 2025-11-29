@@ -1,6 +1,26 @@
 [
-    {
-        "titre": "Charlie et la chocolatrie",
-        "duree": "97"
-    }
+  {
+    "titre": "Charlie et la Chocolaterie",
+    "duree": 115
+  },
+  {
+    "titre": "Avengers: Endgame",
+    "duree": 181
+  },
+  {
+    "titre": "Cars",
+    "duree": 117
+  },
+  {
+    "titre": "Le Roi Lion",
+    "duree": 88
+  },
+  {
+    "titre": "Harry Potter à l'école des sorciers",
+    "duree": 152
+  },
+  {
+    "titre": "Retour vers le Futur",
+    "duree": 116
+  }
 ]

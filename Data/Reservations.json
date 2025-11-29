@@ -1,8 +1,20 @@
 [
-    {
-        "client_nom": "hello",
-        "film": "Charlie et la chocolatrie",
-        "salle": 3,
-        "nb_places": 2
-    }
+  {
+    "client_nom": "user1",
+    "film": "Charlie et la Chocolaterie",
+    "salle": 1,
+    "nb_places": 4
+  },
+  {
+    "client_nom": "user2",
+    "film": "Avengers: Endgame",
+    "salle": 2,
+    "nb_places": 2
+  },
+  {
+    "client_nom": "user1",
+    "film": "Le Roi Lion",
+    "salle": 4,
+    "nb_places": 2
+  }
 ]
