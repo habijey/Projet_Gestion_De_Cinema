@@ -3,7 +3,6 @@
 
 
 
-````
 # 🎬 Projet_Gestion_De_Cinema
 
 Application de gestion de cinéma développée en **Python** avec **interface graphique Tkinter**.  
