@@ -1,8 +1,3 @@
-# Projet_Gestion_De_Cinema
-(exécution du code tapper python 3 main.py)
-
-
-
 # 🎬 Projet_Gestion_De_Cinema
 
 Application de gestion de cinéma développée en **Python** avec **interface graphique Tkinter**.  
