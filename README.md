@@ -1,15 +1,15 @@
 # Projet_Gestion_De_Cinema
 (exécution du code tapper python 3 main.py)
 
+---
 
-
+````markdown
 # 🎬 Projet_Gestion_De_Cinema
 
 Application de gestion de cinéma développée en **Python** avec **interface graphique Tkinter**.  
 Le projet permet la gestion des films, des salles, des utilisateurs, des réservations et des statistiques.
 
-> ▶️ Exécution du projet :
-
+> ▶️ Exécution du projet :  
 ```bash
 python main.py
 ````
@@ -75,12 +75,13 @@ python main.py
 
 ### Clients
 
-* `jason / jason`
-* `test / test`
+* `user1 / client123`
+* `user2 / password123`
+* `test / client123`
 
 💡 Utilise le compte **admin** pour accéder à toutes les fonctionnalités.
 
-
+---
 
 ## 🧭 Fonctionnalités
 
@@ -97,6 +98,7 @@ python main.py
 * Réserver des places
 * Voir l’historique des réservations
 
+---
 
 ## 🎬 Données de test incluses
 
@@ -104,7 +106,7 @@ python main.py
 * **8 salles** (capacités variables)
 * Données sauvegardées automatiquement en **JSON**
 
-
+---
 
 ## ⚙️ Fonctionnement technique
 
@@ -115,7 +117,7 @@ python main.py
 * Protection contre la surréservation
 * Interface moderne (thème **Sun Valley**)
 
-
+---
 
 ## 🧠 Ce qui a été fait
 
@@ -125,7 +127,7 @@ python main.py
 * Messages d’erreur clairs
 * Architecture **MVC simplifiée**
 
-
+---
 
 ## 🧪 Test rapide
 
@@ -136,9 +138,9 @@ python main.py
 5. Inscrire un client
 6. Réserver une place
 
- La réservation apparaît côté client et admin.
+✅ La réservation apparaît côté client et admin.
 
-
+---
 
 ## 🧱 Technologies
 
@@ -148,6 +150,7 @@ python main.py
 * **SHA-256**
 * Compatible **Windows / Linux / macOS**
 
+---
 
 
 Dis-moi 👍
