@@ -3,10 +3,21 @@
 Application de gestion de cinéma développée en **Python** avec **interface graphique Tkinter**.
 Le projet permet la gestion des films, des salles, des utilisateurs, des réservations et des statistiques.
 
-> ▶️ Exécution du projet :
+---
+
+## ▶️ Lancer l’application
 
 ```bash
 python main.py
+```
+
+✅ L’interface graphique s’ouvre.
+
+💡 **Astuce** :
+Si `python` ne fonctionne pas mais que `python3` oui, utilise :
+
+```bash
+python3 main.py
 ```
 
 ---
@@ -19,76 +30,10 @@ python main.py
 * Tkinter (inclus par défaut avec Python)
 * Thème graphique `sv-ttk`
 
-Vérifier si Python est installé :
+### 🔍 Vérification de la version de Python
 
 ```bash
 python --version
-```
-
----
-
-## 🐍 Installation de Python (si non installé)
-
-Si la commande précédente **ne fonctionne pas** ou affiche une erreur, cela signifie que **Python n’est pas installé**.
-
-### 🪟 Windows
-
-1. Aller sur le site officiel :
-   👉 [https://www.python.org/downloads/](https://www.python.org/downloads/)
-
-2. Télécharger **Python 3.8 ou plus récent**
-
-3. Lancer l’installateur et **⚠️ cocher impérativement** :
-
-   ```
-   ✅ Add Python to PATH
-   ```
-
-4. Cliquer sur **Install Now**
-
-5. Redémarrer PowerShell et vérifier :
-
-   ```bash
-   python --version
-   ```
-
-✅ Si une version s’affiche, Python est correctement installé.
-
----
-
-### 🐧 Linux
-
-```bash
-sudo apt update
-sudo apt install python3 python3-pip
-```
-
-Vérification :
-
-```bash
-python3 --version
-```
-
----
-
-### 🍎 macOS
-
-Via Homebrew :
-
-```bash
-brew install python
-```
-
-Ou téléchargement direct :
-👉 [https://www.python.org/downloads/macos/](https://www.python.org/downloads/macos/)
-
----
-
-💡 **Astuce** :
-Si `python` ne fonctionne pas mais que `python3` oui, utilise :
-
-```bash
-python3 main.py
 ```
 
 ---
@@ -114,20 +59,6 @@ cinema/
 ├── utils.py           # Fonctions utilitaires
 └── Data/              # Dossier créé automatiquement (JSON)
 ```
-
----
-
-## ▶️ Lancer l’application
-
-1. Ouvrir le dossier du projet
-2. **Shift + clic droit → Ouvrir PowerShell ici**
-3. Exécuter :
-
-```bash
-python main.py
-```
-
-✅ L’interface graphique s’ouvre.
 
 ---
 
@@ -214,6 +145,4 @@ python main.py
 * **JSON**
 * **SHA-256**
 * Compatible **Windows / Linux / macOS**
-
-
 
