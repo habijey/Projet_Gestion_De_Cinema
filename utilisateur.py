@@ -44,7 +44,6 @@ class GestionUtilisateurs:
             admin = Utilisateur("admin", "admin123", "admin")
             self.utilisateurs.append(admin)
             self.sauvegarder_utilisateurs()
-            print("✅ Compte admin créé par défaut (admin/admin123)")
     
     def inscrire(self, username, password, role="client"):
         if any(u.username == username for u in self.utilisateurs):
