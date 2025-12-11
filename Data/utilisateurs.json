@@ -6,17 +6,17 @@
   },
   {
     "username": "user1",
-    "password_hash": "e6c3da5b206634d7f3f3586d747ffdb36b5c675757b380c6a5fe5c570c714349",
-    "role": "client"
-  },
-  {
-    "username": "user2", 
-    "password_hash": "3ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4a",
+    "password_hash": "186474c1f2c2f735a54c2cf82ee8e87f2a5cd30940e280029363fecedfc5328c",
     "role": "client"
   },
   {
     "username": "test",
-    "password_hash": "e6c3da5b206634d7f3f3586d747ffdb36b5c675757b380c6a5fe5c570c714349",
+    "password_hash": "186474c1f2c2f735a54c2cf82ee8e87f2a5cd30940e280029363fecedfc5328c",
+    "role": "client"
+  },
+  {
+    "username": "user2",
+    "password_hash": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
     "role": "client"
   }
 ]
