@@ -67,7 +67,6 @@ cinema/
 ├── classe.py          # Films, salles, réservations
 ├── utilisateur.py     # Gestion des utilisateurs
 ├── sauvegarde.py      # Sauvegarde des données
-├── utils.py           # Fonctions utilitaires
 └── Data/              # Dossier créé automatiquement (JSON)
 ```
 
