@@ -1,46 +1,27 @@
 # 🎬 Projet_Gestion_De_Cinema
 
 Application de gestion de cinéma développée en **Python** avec **interface graphique Tkinter**.
-Le projet permet la gestion des films, des salles, des utilisateurs, des réservations et des statistiques.
+Elle permet de gérer les films, salles, utilisateurs, réservations et statistiques.
 
 ---
 
-## ▶️ Lancer l’application
+# 🚀 Installation & Préparation
 
-```bash
-python main.py
-```
+## ✅ 1. Prérequis
 
-✅ L’interface graphique s’ouvre.
+Avant de lancer l’application, assure-toi d’avoir :
 
-💡 **Astuce** :
-Si `python` ne fonctionne pas mais que `python3` oui, utilise :
-
-```bash
-python3 main.py
-```
-
----
-
-## 🚀 Installation
-
-### ✅ Prérequis
+### 📝 Logiciels requis
 
 * **Python 3.8 ou plus**
-* Tkinter (inclus par défaut avec Python)
-* Thème graphique `sv-ttk`
+* **Tkinter** (inclus par défaut dans la plupart des installations Python)
+* **pip** (gestionnaire de paquets Python)
 
-### 🔍 Vérification de la version de Python
+### 🎨 Thème graphique requis
 
-```bash
-python --version
-```
+L’application utilise le thème moderne **Sun Valley Tkinter (sv-ttk)**.
 
----
-
-## 📦 Installation des dépendances
-
-Installer le thème graphique :
+📦 **Installer le thème :**
 
 ```bash
 pip install sv-ttk
@@ -48,7 +29,37 @@ pip install sv-ttk
 
 ---
 
-## 📁 Structure du projet
+# ▶️ 2. Vérifier que Python est installé
+
+```bash
+python --version
+```
+
+Si cela ne fonctionne pas, utilise plutôt :
+
+```bash
+python3 --version
+```
+
+---
+
+# ▶️ 3. Lancer l’application
+
+Une fois les dépendances installées :
+
+```bash
+python main.py
+```
+
+ou (selon le système)
+
+```bash
+python3 main.py
+```
+
+---
+
+# 📦 Structure du projet
 
 ```
 cinema/
@@ -62,7 +73,7 @@ cinema/
 
 ---
 
-## 👤 Comptes de démonstration
+# 👤 Comptes de démonstration
 
 ### 👑 Administrateur
 
@@ -75,74 +86,59 @@ cinema/
 * `user2 / password123`
 * `test / client123`
 
-💡 Le compte **admin** donne accès à toutes les fonctionnalités.
-
 ---
 
-## 🧭 Fonctionnalités
+# 🧭 Fonctionnalités
 
 ### 👑 Administrateur
 
-* Ajouter des films
-* Créer des salles
-* Programmer des films
-* Consulter les statistiques
+✔ Ajouter des films
+✔ Créer des salles
+✔ Programmer des films
+✔ Consulter les statistiques
 
 ### 👤 Client
 
-* Consulter les films disponibles
-* Réserver des places
-* Voir l’historique des réservations
+✔ Voir les films disponibles
+✔ Réserver des places
+✔ Consulter l’historique
 
 ---
 
-## 🎬 Données de test incluses
+# 🎬 Données de test incluses
 
-* **6 films** préchargés
-* **8 salles** avec capacités variables
-* Sauvegarde automatique des données en **JSON**
+* **6 films** prédéfinis
+* **8 salles**
+* Sauvegarde automatique **JSON**
 
 ---
 
-## ⚙️ Fonctionnement technique
+# ⚙️ Fonctionnement technique
 
 * Sauvegarde automatique
 * Données persistantes (JSON)
 * Mots de passe hachés (**SHA-256**)
-* Validation des entrées utilisateur
-* Protection contre la surréservation
-* Interface moderne (thème **Sun Valley**)
+* Validation des entrées
+* Anti-surréservation
+* Interface moderne avec **sv-ttk (Sun Valley Theme)**
 
 ---
 
-## 🧠 Ce qui a été implémenté
-
-* Gestion dynamique des rôles (admin / client)
-* Interface graphique par onglets
-* Mise à jour en temps réel
-* Messages d’erreur explicites
-* Architecture **MVC simplifiée**
-
----
-
-## 🧪 Test rapide
+# 🧪 Test rapide
 
 1. Connexion admin (`admin / admin123`)
 2. Ajouter un film
 3. Créer une salle
-4. Programmer le film
-5. Se connecter avec un client
-6. Réserver une place
-
-✅ La réservation est visible côté client et administrateur.
+4. Programmer un film
+5. Connexion client
+6. Faire une réservation
 
 ---
 
-## 🧱 Technologies utilisées
+# 🧱 Technologies utilisées
 
 * **Python**
 * **Tkinter + sv-ttk**
 * **JSON**
 * **SHA-256**
-* Compatible **Windows / Linux / macOS**
-
+* Compatible Windows / Linux / macOS
