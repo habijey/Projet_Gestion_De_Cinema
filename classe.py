@@ -41,7 +41,6 @@ class Reservation:
 
     def confirmer(self):
         self.salle.reserver_place(self.nb_places)
-        print(f"Réservation confirmée pour {self.client_nom} ({self.nb_places} places pour {self.film.titre})")
     
     def to_dict(self):
         return {
