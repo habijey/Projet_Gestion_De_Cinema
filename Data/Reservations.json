@@ -16,5 +16,11 @@
     "film": "Le Roi Lion",
     "salle": 4,
     "nb_places": 2
+  },
+  {
+    "client_nom": "test",
+    "film": "Harry Potter à l'école des sorciers",
+    "salle": 5,
+    "nb_places": 10
   }
 ]
